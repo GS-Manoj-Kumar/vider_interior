@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Privacy Policy — VIDeR Interiors{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-background text-foreground">
+
+  <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+
+    <!-- Back link -->
+    <a href="/" class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+      </svg>
+      Back to Home
+    </a>
+
+    <h1 class="text-3xl md:text-4xl font-bold font-display mb-4">Privacy Policy</h1>
+    <p class="text-muted-foreground mb-12">Last updated: March 2026</p>
+
+    <div class="space-y-10 text-foreground/90 leading-relaxed">
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">1. Introduction</h2>
+        <p>GR Chola Ventures (operating as VIDeR Interiors) is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your personal information when you interact with our website and services.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">2. Information We Collect</h2>
+        <p>We collect the following information when you submit our consultation form or interact with our website:</p>
+        <ul class="list-disc pl-6 mt-3 space-y-1">
+          <li>Full name</li>
+          <li>Phone number</li>
+          <li>Project details (BHK type, timeline, budget range)</li>
+          <li>Website usage data through Microsoft Clarity (heatmaps, session recordings, anonymized interaction data)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">3. How We Use Your Information</h2>
+        <p>Your information is used for the following purposes:</p>
+        <ul class="list-disc pl-6 mt-3 space-y-1">
+          <li>To contact you regarding your interior design consultation</li>
+          <li>To understand your project requirements and provide accurate quotes</li>
+          <li>To improve our website experience using anonymized analytics</li>
+          <li>To communicate project updates and relevant offers</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">4. Data Sharing</h2>
+        <p>We do not sell, trade, or rent your personal information to third parties. Your data may be shared with:</p>
+        <ul class="list-disc pl-6 mt-3 space-y-1">
+          <li>Our internal project team for execution purposes</li>
+          <li>Trusted service providers (e.g., Make.com for form processing) under strict confidentiality</li>
+          <li>Microsoft Clarity for anonymized website analytics</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">5. Data Security</h2>
+        <p>We implement appropriate technical and organizational measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet is 100% secure.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">6. Cookies & Tracking</h2>
+        <p>This data is anonymized and used solely to improve website usability. No personally identifiable information is shared with Microsoft through this tool.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">7. Your Rights</h2>
+        <p>You have the right to:</p>
+        <ul class="list-disc pl-6 mt-3 space-y-1">
+          <li>Request access to the personal data we hold about you</li>
+          <li>Request correction or deletion of your data</li>
+          <li>Withdraw consent for marketing communications at any time</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">8. Data Retention</h2>
+        <p>We retain your personal information only for as long as necessary to fulfill the purposes outlined in this policy or as required by law. Project-related data may be retained for warranty and reference purposes.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">9. Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">10. Contact Us</h2>
+        <p>If you have questions about this Privacy Policy or wish to exercise your rights, please contact us through the consultation form on our website.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <footer class="py-8 text-center text-sm text-muted-foreground border-t border-border">
+    <p>© {% now "Y" %} GR CHOLA VENTURES. All rights reserved.</p>
+  </footer>
+
+</div>
+{% endblock %}

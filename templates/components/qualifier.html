@@ -1,0 +1,38 @@
+<section class="section-padding">
+  <div class="section-container">
+    <div class="max-w-2xl mx-auto text-center">
+
+      <h2 class="text-2xl md:text-4xl font-bold mb-10 text-sky-950">
+        Who Is This <span class="text-primary">Suitable For?</span>
+      </h2>
+
+      <div class="space-y-4 text-left inline-block">
+        {% for item in qualifiers %}
+        <div class="flex items-center gap-3">
+          <div class="w-6 h-6 rounded-full bg-success/10 flex items-center justify-center shrink-0">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-success"
+                 viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 6 9 17l-5-5"/>
+            </svg>
+          </div>
+          <span class="text-foreground text-lg">{{ item }}</span>
+        </div>
+        {% endfor %}
+      </div>
+
+      <!-- Disqualifier -->
+      <div class="mt-10 flex items-start gap-3 text-left bg-muted rounded-xl p-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-destructive mt-0.5 shrink-0"
+             viewBox="0 0 24 24" fill="none" stroke="currentColor"
+             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+        </svg>
+        <p class="text-muted-foreground">
+          If you're only looking for basic carpentry at the lowest cost, we may not be the right fit.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

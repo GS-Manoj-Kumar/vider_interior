@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Page Not Found — VIDeR Interiors{% endblock %}
+
+{% block content %}
+<div class="min-h-screen flex items-center justify-center bg-muted">
+  <div class="text-center px-6">
+    <h1 class="text-8xl font-bold font-display text-primary mb-4">404</h1>
+    <p class="text-2xl font-display font-semibold text-foreground mb-3">Page Not Found</p>
+    <p class="text-muted-foreground mb-8">The page you're looking for doesn't exist or has been moved.</p>
+    <a href="/"
+       class="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-lg font-display font-semibold hover:opacity-90 transition-opacity">
+      Back to Home
+    </a>
+  </div>
+</div>
+{% endblock %}

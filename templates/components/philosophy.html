@@ -1,0 +1,41 @@
+{% load static %}
+<section class="section-padding bg-foreground text-background">
+  <div class="section-container">
+
+    <p class="font-semibold tracking-wide uppercase text-sm mb-3 text-primary">
+      Our Approach
+    </p>
+    <h2 class="text-2xl md:text-4xl font-bold mb-4 text-sky-100">
+      Our Structured Execution Philosophy
+    </h2>
+    <p class="text-white/70 mb-12 max-w-2xl text-lg">
+      We approach interiors as a planned system — not a rushed process.
+    </p>
+
+    <!-- Timeline -->
+    <div class="space-y-0 border-l-2 ml-4 md:ml-0 border-primary/40">
+      {% for pillar in pillars %}
+      <div class="relative pl-10 md:pl-14 py-6">
+
+        <!-- Timeline dot -->
+        <div class="absolute left-0 top-8 -translate-x-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-primary text-white shadow-lg">
+          {{ pillar.icon|safe }}
+        </div>
+
+        <h3 class="text-lg md:text-xl font-semibold mb-1 text-primary">{{ pillar.title }}</h3>
+        <p class="leading-relaxed max-w-xl mt-2 text-stone-50">{{ pillar.desc }}</p>
+        <p class="leading-relaxed max-w-xl mt-1 italic text-primary font-light text-xs">{{ pillar.highlight }}</p>
+
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Closing quote -->
+    <div class="mt-12 border border-primary/30 px-8 py-6 max-w-2xl backdrop-blur-sm border-double rounded-md bg-primary/20">
+      <p class="text-white/90 md:text-xl italic leading-relaxed text-center text-base">
+        "Because most interior regrets don't come from what you chose — they come from what was never clearly defined."
+      </p>
+    </div>
+
+  </div>
+</section>

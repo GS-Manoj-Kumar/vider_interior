@@ -1,0 +1,32 @@
+<section class="section-padding bg-background">
+  <div class="section-container">
+
+    <h2 class="text-2xl md:text-4xl font-bold mb-4 text-sky-950">
+      Why Many Interior Projects in Bangalore
+      <span class="text-sky-600">Face Delays</span>
+    </h2>
+    <p class="text-muted-foreground mb-10 max-w-2xl">
+      Bangalore's interior market is fast-paced. Unfortunately, many projects struggle due to:
+    </p>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
+      {% for reason in delay_reasons %}
+      <div class="flex items-start gap-4 rounded-xl border border-border bg-card p-5">
+        <div class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-sky-950">
+          <!-- inline svg icon passed from view -->
+          {{ reason.icon|safe }}
+        </div>
+        <span class="text-foreground leading-relaxed text-sm md:text-base">{{ reason.text }}</span>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="rounded-xl bg-accent p-8 max-w-2xl">
+      <p class="text-lg leading-relaxed text-foreground">
+        Most projects don't face issues due to design capability.
+        <strong>They face issues due to lack of structure.</strong>
+      </p>
+    </div>
+
+  </div>
+</section>

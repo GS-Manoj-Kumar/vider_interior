@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Terms & Conditions — VIDeR Interiors{% endblock %}
+
+{% block content %}
+<div class="min-h-screen bg-background text-foreground">
+
+  <!-- Header -->
+  <div class="max-w-4xl mx-auto px-6 py-12 md:py-20">
+
+    <!-- Back link -->
+    <a href="/" class="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>
+      </svg>
+      Back to Home
+    </a>
+
+    <h1 class="text-3xl md:text-4xl font-bold font-display mb-4">Terms & Conditions</h1>
+    <p class="text-muted-foreground mb-12">Last updated: March 2026</p>
+
+    <div class="space-y-10 text-foreground/90 leading-relaxed">
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">1. Introduction</h2>
+        <p>These Terms & Conditions govern the use of interior design and execution services provided by GR Chola Ventures (operating as VIDeR Interiors), based in Bangalore, India. By engaging our services, you agree to abide by these terms.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">2. Scope of Services</h2>
+        <p>We provide end-to-end interior design and execution services, including but not limited to design consultation, material sourcing, project management, civil work, modular furniture, electrical & plumbing coordination, and final handover. The exact scope shall be defined in a mutually agreed Bill of Quantities (BOQ) before commencement.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">3. Quotation & Pricing</h2>
+        <p>All pricing is fixed once the scope and BOQ are finalized. Any additions or modifications requested after approval will be quoted separately and require written consent before execution. We reserve the right to revise pricing if material costs fluctuate significantly due to market conditions.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">4. Payment Terms</h2>
+        <p>Payments shall be made as per the agreed milestone schedule outlined in the project contract. Delays in payment may result in corresponding delays in project execution. All payments are non-refundable once work on the respective milestone has commenced.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">5. Project Timeline</h2>
+        <p>Typical project execution takes 45–60 days depending on scope. Timelines are estimates and may vary due to unforeseen circumstances, site conditions, or client-side delays (e.g., delayed approvals, access restrictions). We will communicate any changes promptly.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">6. Client Responsibilities</h2>
+        <p>The client must provide timely access to the project site, approvals for designs and materials, and ensure that all necessary permissions from building management or authorities are obtained before work begins.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">7. Warranty</h2>
+        <p>We provide a warranty on workmanship and modular installations as specified in the project agreement. This warranty does not cover damage caused by misuse, negligence, natural wear and tear, or unauthorized modifications.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">8. Cancellation</h2>
+        <p>Either party may terminate the agreement with written notice. In case of client-initiated cancellation, payments made for completed milestones and materials already procured are non-refundable.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">9. Limitation of Liability</h2>
+        <p>GR Chola Ventures shall not be liable for delays or failures resulting from force majeure events, including natural disasters, government regulations, supply chain disruptions, or pandemic-related restrictions.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">10. Governing Law</h2>
+        <p>These terms are governed by the laws of India. Any disputes shall be subject to the exclusive jurisdiction of the courts in Bangalore, Karnataka.</p>
+      </section>
+
+      <section>
+        <h2 class="text-xl font-semibold font-display mb-3">11. Contact</h2>
+        <p>For any queries regarding these terms, please reach out through our consultation form on the website or contact us directly.</p>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-8 text-center text-sm text-muted-foreground border-t border-border">
+    <p>© {% now "Y" %} GR CHOLA VENTURES. All rights reserved.</p>
+  </footer>
+
+</div>
+{% endblock %}

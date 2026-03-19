@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}VIDeR Interiors — Bangalore{% endblock %}</title>
+  <meta name="description" content="{% block description %}Structured interior design and execution for Bangalore homeowners.{% endblock %}" />
+  <link rel="preload" href="{% static 'fonts/space-grotesk-v22-latin-700.woff2' %}" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-background text-foreground">
+
+  <!-- NAVBAR — desktop only -->
+  <header class="hidden md:flex fixed top-0 left-0 right-0 z-50 bg-white/20 backdrop-blur-md border-b border-white/20">
+    <div class="w-full px-8 h-16 flex items-center justify-between">
+
+      <!-- Logo + Name -->
+      <a href="/" class="flex items-center gap-1 rounded-lg">
+        <img src="{% static 'images/assets/logo.png' %}"
+             alt="VIDeR Interiors"
+             class="h-12 w-auto" />
+        {% comment %} <span class="font-display font-bold text-lg px-1 py-2.5 text-foreground tracking-wide">VIDeR</span> {% endcomment %}
+      </a>
+
+      <!-- CTA -->
+      <a href="#consultation-form"
+         class="bg-primary text-primary-foreground px-5 py-2.5 rounded-lg text-sm font-display font-semibold hover:opacity-90 transition-opacity">
+        Book Free Call
+      </a>
+
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT — no top padding, hero extends under navbar -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- MOBILE STICKY CTA BAR — mobile only -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
+    <a href="#consultation-form"
+       class="block w-full bg-primary text-primary-foreground py-3 rounded-lg text-base font-display font-semibold text-center hover:opacity-90 transition-opacity">
+      Book Free Call
+    </a>
+  </div>
+
+  {% block scripts %}{% endblock %}
+<script src="{% static 'js/carousel.js' %}"></script>
+
+
+</body>
+</html>
