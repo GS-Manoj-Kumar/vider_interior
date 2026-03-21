@@ -6,3 +6,6 @@ start "Django Server" cmd /k "venv\Scripts\activate && python manage.py runserve
 @REM Then run it:
 @REM ```
 @REM .\start.bat
+
+
+@REM /home/ubuntu/deploy.sh
