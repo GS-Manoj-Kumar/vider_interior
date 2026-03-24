@@ -28,7 +28,7 @@ def home(request):
     delay_reasons = [
         {"icon": icon_users, "text": "Designers handling too many flats at the same time"},
         {"icon": icon_layout, "text": "Execution starting before layouts are fully finalized"},
-        {"icon": icon_table, "text": "Site readiness not done before execution"},
+        {"icon": icon_table, "text": "Site readiness not done before execution planning"},
         {"icon": icon_help, "text": "MDF vs Plywood confusion"},
         {"icon": icon_rupee, "text": "Budget mismatches discovered mid-project"},
         {"icon": icon_clock, "text": "Aggressive timelines promised to close the deal"},
