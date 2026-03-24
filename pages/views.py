@@ -116,7 +116,6 @@ def home(request):
         "New flat/Villa owners",
         "End-to-end re-model",
         "Possession within 3 months",
-        "Budget range ₹8L – ₹25L",
         "Looking for structured, stress-free interiors",
     ]
 
