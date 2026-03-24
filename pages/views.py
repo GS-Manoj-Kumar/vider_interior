@@ -120,11 +120,11 @@ def home(request):
     ]
 
     testimonials = [
-        {"name": "Rajesh Kumar", "initials": "RK", "text": "Exceptional work! They transformed our 3BHK into a dream home. The attention to detail and quality of materials used was outstanding."},
-        {"name": "Priya Sharma", "initials": "PS", "text": "Professional team and timely delivery. Our modular kitchen is exactly what we envisioned. Highly recommend their services!"},
+        {"name": "Krishna", "initials": "RK", "text": "Exceptional work! They transformed our 3BHK into a dream home. The attention to detail and quality of materials used was outstanding."},
+        {"name": "Rajendra Prasad", "initials": "PS", "text": "Professional team and timely delivery. Our modular kitchen is exactly what we envisioned. Highly recommend their services!"},
         {"name": "Amit Patel", "initials": "AP", "text": "From concept to handover, everything was seamless. The 10-year warranty gave us peace of mind. Worth every rupee!"},
-        {"name": "Sneha Reddy", "initials": "SR", "text": "Amazing design sense and execution. They helped us choose from 1200+ combos and created a unique space for our family."},
-        {"name": "Vikram Singh", "initials": "VS", "text": "Post-handover support is excellent. Any minor issues were resolved immediately. True professionals in every sense!"},
+        {"name": "Ravi", "initials": "SR", "text": "Amazing design sense and execution. They helped us choose from 1200+ combos and created a unique space for our family."},
+        {"name": "Shekar", "initials": "VS", "text": "Post-handover support is excellent. Any minor issues were resolved immediately. True professionals in every sense!"},
     ]
 
     reels = [
