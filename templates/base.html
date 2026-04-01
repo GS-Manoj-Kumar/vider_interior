@@ -49,15 +49,27 @@
   </div>
 
   {% block scripts %}{% endblock %}
-iframe[src*="getgabs"] {
-   <style>
+<style>
+  /* 1. Target the iframe by its source */
   iframe[src*="getgabs"] {
-    transform: scale(0.7) !important;
+    width: 60px !important;
+    height: 60px !important;
+    transform: scale(0.6) !important;
     transform-origin: bottom right !important;
-    bottom: 0px !important;
-    right: 0px !important;
-    width: 100px !important; 
-    height: 100px !important;
+  }
+
+  /* 2. Target the common GetGabs container names */
+  .getgabs-widget, #getgabs-widget-container, [id*="getredto"] {
+    transform: scale(0.6) !important;
+    transform-origin: bottom right !important;
+    width: auto !important;
+    height: auto !important;
+  }
+
+  /* 3. Force the SVG icon inside to shrink if it's accessible */
+  svg.getgabs-icon {
+    width: 30px !important;
+    height: 30px !important;
   }
 </style>
 <script src="https://app.getgabs.com/getredtowp/iframe/brfqsDUGSAwW9a6i2p9hXshDZ7wiAK64KJP7IGWW1NGaRBcXg7REuijZtNswkbON5AIl6VerOuxUe6Y0vOgbUaVUFNdGHEwLkAGu" async></script>
