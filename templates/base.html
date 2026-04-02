@@ -39,26 +39,23 @@
   <main>
     {% block content %}{% endblock %}
   </main>
-<!-- MOBILE STICKY CTA BAR — mobile only -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
-    <!-- FLEX CONTAINER FOR BOTH BUTTONS -->
-    <div class="flex space-x-2 w-full"> <!-- Added flex and space-x-2 here, and w-full to make the flex container take full width -->
-      <!-- Book Free Call button -->
-      <a href="#consultation-form"
-         class="flex-grow bg-primary text-primary-foreground py-3 rounded-lg text-base font-display font-semibold text-center hover:opacity-90 transition-opacity">
-        Book Free Call
-      </a>
 
-      <!-- WhatsApp button -->
-      <a href="https://wa.me/918951482555" target="_blank"
-         class="flex-shrink-0 bg-green-500 text-white py-3 px-4 rounded-lg text-base font-display font-semibold text-center hover:opacity-90 transition-opacity flex items-center justify-center">
-          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M12.04 2C6.59 2 2.11 6.37 2.11 11.75c0 1.74.45 3.4.13 5.37l-1.92 6.07 6.13-1.87c1.78.96 3.79 1.48 5.59 1.48 5.45 0 9.94-4.37 9.94-9.75S17.49 2 12.04 2zm5.72 15.09c-.19.1-.41.15-.65.15-.24 0-.48-.05-.71-.14l-1.63-.8c-.37-.18-.8-.2-.93-.2s-.36.01-.52.09c-.16.08-.34.22-.52.39-.18.17-.38.35-.58.53-.2.19-.44.37-.69.47-.25.11-.53.16-.8.16-.54 0-1.07-.15-1.55-.45-.49-.3-.9-.72-1.25-1.2-.35-.49-.62-1.07-.8-1.74-.18-.68-.22-1.42-.11-2.22l.27-.42c.07-.11.16-.25.26-.4.09-.15.19-.3.28-.43.1-.14.19-.27.27-.4.07-.12.11-.23.11-.32 0-.25-.09-.43-.19-.57-.1-.14-.23-.25-.39-.34-.16-.09-.32-.14-.49-.16-.16-.02-.32-.01-.48.01-.16.02-.32.06-.48.12-.16.06-.31.14-.46.25l-.26.19c-.31.22-.55.48-.75.76-.2.29-.36.6-.47.93-.11.33-.18.68-.21 1.05-.03.37.03.73.18 1.07.15.34.36.67.63.97.27.3.59.58.96.85.37.26.79.5 1.25.7.46.2.95.36 1.47.47.52.1.99.16 1.47.16 1.06 0 2.06-.29 2.97-.87.9-.58 1.63-1.39 2.16-2.42.53-1.04.79-2.21.79-3.48 0-.23-.01-.45-.04-.67-.02-.22-.07-.44-.13-.65l-.04-.13c-.07-.22-.17-.4-.29-.55-.12-.15-.25-.26-.4-.32-.15-.06-.3-.08-.46-.05-.16.03-.3.1-.43.2l-.24.19z"/>
-          </svg>
-          <span class="ml-2">WhatsApp</span>
-      </a>
-    </div>
+      <!-- MOBILE STICKY CTA BAR — mobile only -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
+    <a href="#consultation-form"
+       class="block w-full bg-primary text-primary-foreground py-3 rounded-lg text-base font-display font-semibold text-center hover:opacity-90 transition-opacity">
+      Book Free Call
+    </a>
   </div>
+
+  <!-- NEW WHATSAPP BUTTON - added below the CTA -->
+  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
+    <a href="https://wa.me/918951482555" target="_blank"
+        class="block w-full bg-primary text-primary-foreground py-3 rounded-lg text-base font-display font-semibold text-center hover:opacity-90 transition-opacity">
+      Whatsapp
+    </a>
+  </div>
+
 
   {% block scripts %}{% endblock %}
 </body>
