@@ -40,13 +40,19 @@
     {% block content %}{% endblock %}
   </main>
 
-      <!-- MOBILE STICKY CTA BAR — mobile only -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
-    <a href="#consultation-form"
-       class="block w-half bg-primary text-primary-foreground py-3 rounded-lg text-base font-display font-semibold text-center hover:opacity-90 transition-opacity">
-      Book Free Call    
-    </a>
-  </div>
+     43 <!-- MOBILE STICKY CTA BAR - mobile only -->
+ <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
+     <div class="flex space-x-3">
+         <a href="#consultation-form"
+            class="flex-1 bg-primary text-primary-foreground rounded-lg py-3 text-base font-semibold text-center transition-opacity hover:opacity-90">
+             Book Free Call
+        </a>
+         <a href="https://wa.me/YOUR_PHONE_NUMBER" target="_blank" rel="noopener noreferrer"
+            class="flex-1 bg-green-500 text-white rounded-lg py-3 text-base font-semibold text-center transition-opacity hover:opacity-90">
+             Whatsapp
+         </a>
+     </div>
+ </div>
 
   {% block scripts %}{% endblock %}
 </body>
