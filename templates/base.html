@@ -40,17 +40,20 @@
     {% block content %}{% endblock %}
   </main>
 
-  <!-- MOBILE STICKY CTA BAR — mobile only -->
-  <div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
-    <a href="#consultation-form"
-       class="block w-full bg-primary text-primary-foreground py-3 rounded-lg text-base font-display font-semibold text-center hover:opacity-90 transition-opacity">
-      Book Free Call
-    </a>
-  </div>
+     <!-- MOBILE STICKY CTA BAR - mobile only -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-card border-t border-border p-3">
+    <div class="flex gap-3 px-1">
+        <a href="#consultation-form"
+           class="flex-1 bg-primary text-primary-foreground rounded-lg py-3 text-base font-semibold text-center transition-opacity hover:opacity-90">
+            Book Free Call
+        </a>
+        <a href="https://wa.me/918951482555" target="_blank" rel="noopener noreferrer"
+   class="flex-1 rounded-lg py-3 text-base font-semibold text-center transition-opacity hover:opacity-90"
+   style="background-color: #128C7E; color: white; display: block;">
+    WhatsApp
+</a>
+    </div>
 
   {% block scripts %}{% endblock %}
-<script src="{% static 'js/carousel.js' %}"></script>
-
-
 </body>
 </html>

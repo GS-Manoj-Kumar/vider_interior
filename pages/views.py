@@ -28,7 +28,7 @@ def home(request):
     delay_reasons = [
         {"icon": icon_users, "text": "Designers handling too many flats at the same time"},
         {"icon": icon_layout, "text": "Execution starting before layouts are fully finalized"},
-        {"icon": icon_table, "text": "Electrical planning done after site work begins"},
+        {"icon": icon_table, "text": "Site readiness not done before execution planning"},
         {"icon": icon_help, "text": "MDF vs Plywood confusion"},
         {"icon": icon_rupee, "text": "Budget mismatches discovered mid-project"},
         {"icon": icon_clock, "text": "Aggressive timelines promised to close the deal"},
@@ -116,16 +116,15 @@ def home(request):
         "New flat/Villa owners",
         "End-to-end re-model",
         "Possession within 3 months",
-        "Budget range ₹8L – ₹25L",
         "Looking for structured, stress-free interiors",
     ]
 
     testimonials = [
-        {"name": "Rajesh Kumar", "initials": "RK", "text": "Exceptional work! They transformed our 3BHK into a dream home. The attention to detail and quality of materials used was outstanding."},
-        {"name": "Priya Sharma", "initials": "PS", "text": "Professional team and timely delivery. Our modular kitchen is exactly what we envisioned. Highly recommend their services!"},
+        {"name": "Krishna", "initials": "RK", "text": "Exceptional work! They transformed our 3BHK into a dream home. The attention to detail and quality of materials used was outstanding."},
+        {"name": "Rajendra Prasad", "initials": "RP", "text": "Professional team and timely delivery. Our modular kitchen is exactly what we envisioned. Highly recommend their services!"},
         {"name": "Amit Patel", "initials": "AP", "text": "From concept to handover, everything was seamless. The 10-year warranty gave us peace of mind. Worth every rupee!"},
-        {"name": "Sneha Reddy", "initials": "SR", "text": "Amazing design sense and execution. They helped us choose from 1200+ combos and created a unique space for our family."},
-        {"name": "Vikram Singh", "initials": "VS", "text": "Post-handover support is excellent. Any minor issues were resolved immediately. True professionals in every sense!"},
+        {"name": "Ravi", "initials": "SR", "text": "Amazing design sense and execution. They helped us choose from 1200+ combos and created a unique space for our family."},
+        {"name": "Shekar", "initials": "VS", "text": "Post-handover support is excellent. Any minor issues were resolved immediately. True professionals in every sense!"},
     ]
 
     reels = [
