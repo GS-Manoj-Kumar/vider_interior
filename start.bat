@@ -7,5 +7,5 @@ start "Django Server" cmd /k "venv\Scripts\activate && python manage.py runserve
 @REM ```
 @REM .\start.bat
 
-
+@REM ssh -i "copy and paste path of your ssh.key file here " ubuntu@140.238.249.156
 @REM /home/ubuntu/deploy.sh

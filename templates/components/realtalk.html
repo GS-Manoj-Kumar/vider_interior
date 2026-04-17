@@ -1,584 +1,215 @@
 {% load static %}
 
+<section class="bg-[#f5f0e8] py-[88px] md:py-[96px]">
+  <div class="max-w-[1140px] mx-auto px-[28px]">
+
+    <!-- Heading block -->
+    <p class="text-[11px] font-semibold tracking-[0.18em] uppercase mb-4"
+       style="color: var(--color-primary)">
+      Before You Sign Anything
+    </p>
+
+<h2 class="text-[#14110f] font-extrabold tracking-[-0.03em] leading-[1.08] mb-6
+           text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] xl:text-[48px]">
+      Questions Every Smart Homeowner Should Ask —
+      <span style="color: var(--color-primary)">Answered Honestly.</span>
+    </h2>
+
+    <p class="max-w-[760px] text-[#6e6458] leading-[1.75] mb-14
+              text-[18px] md:text-[20px]">
+      New homeowners ask hard questions before hiring anyone — about hidden commissions,
+      inflating quotes, delays, and contractors who vanish after taking advance.
+      <strong class="font-semibold text-[#1f1b18]">
+        These are real concerns. Here's exactly where VIDeR stands on each one.
+      </strong>
+    </p>
+
+    <!-- Accordion -->
+    <div class="flex flex-col gap-[6px] mb-14">
+      {% for item in realtalk_items %}
+      <div class="rt-item {% if forloop.first %}rt-open{% endif %}
+                  bg-white border border-[#e8e0d4] rounded-[10px] overflow-hidden transition-all duration-200">
+
+        <button class="w-full flex items-center gap-4 px-[22px] py-[20px]
+                       cursor-pointer bg-transparent border-0 text-left font-[inherit]"
+                onclick="rtToggle(this)">
+
+          <span class="text-[11px] font-bold tracking-[0.08em] min-w-[24px] shrink-0"
+                style="color: var(--color-primary)">
+            {{ item.num }}
+          </span>
+
+          <div class="flex-1">
+            <span class="inline-block text-[10px] font-semibold tracking-[0.1em] uppercase
+                         rounded-[4px] px-[8px] py-[2px] mb-[6px]
+                         bg-[#fdf0e8] border border-[rgba(212,105,58,0.2)]"
+                  style="color: var(--color-primary)">
+              {{ item.tag }}
+            </span>
+            <p class="text-[0.97rem] font-bold leading-[1.45] text-[#1a1714]">
+              "{{ item.question }}"
+            </p>
+          </div>
+
+          <svg class="rt-chevron shrink-0 transition-transform duration-300"
+               style="width:18px;height:18px;stroke:var(--color-primary);fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;"
+               viewBox="0 0 24 24">
+            <polyline points="6 9 12 15 18 9"/>
+          </svg>
+        </button>
+
+        <div class="rt-body" style="max-height:0;overflow:hidden;transition:max-height 0.38s ease;">
+          <div class="border-t border-[#e8e0d4] px-[22px] pt-[14px] pb-[18px] md:pl-[60px]
+                      flex flex-col gap-3">
+            <p class="text-[0.93rem] leading-[1.75] text-[#3d3830]">
+              {{ item.answer }}
+            </p>
+            <div class="flex gap-3 items-start bg-[#fff7f2] px-4 py-[13px]"
+                 style="border-left:3px solid var(--color-primary);border-radius:0 6px 6px 0;">
+              <span class="text-base shrink-0">{{ item.tip_icon }}</span>
+              <p class="text-[0.87rem] text-[#2e2a25] leading-[1.6]">{{ item.tip }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- Checklist -->
+    <div class="bg-white border border-[#e8e0d4] rounded-[12px] px-8 md:px-12 py-10 mb-14">
+      <p class="text-[1rem] md:text-[1.1rem] font-bold text-[#1a1714] mb-5">
+        Before finalizing any interior firm,
+        <span style="color: var(--color-primary)">ask these questions</span>
+      </p>
+      <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-x-10 gap-y-4">
+        {% for check in realtalk_checks %}
+        <div class="flex gap-3 items-start text-[0.88rem] text-[#2e2a25] leading-[1.55]">
+          <span class="w-[18px] h-[18px] rounded-[4px] flex items-center justify-center shrink-0 mt-[1px]"
+                style="background:var(--color-primary)">
+            <svg viewBox="0 0 12 12" style="width:10px;height:10px;stroke:#fff;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;">
+              <polyline points="1.5 6 4.5 9 10.5 3"/>
+            </svg>
+          </span>
+          <span>{{ check }}</span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- Dark Strip -->
+    <div class="rounded-[16px] px-8 md:px-[56px] py-12 md:py-[64px] mb-14
+                grid md:grid-cols-2 gap-10 md:gap-[60px] items-center"
+         style="background:#14110f;">
+
+      <!-- Left: heading -->
+      <div>
+        <p class="text-[10.5px] font-semibold tracking-[0.18em] uppercase mb-5"
+           style="color:var(--color-primary)">
+          The VIDeR Difference
+        </p>
+        <h3 class="font-extrabold leading-[1.22] tracking-[-0.02em] mb-5"
+            style="font-size:clamp(1.7rem,2.5vw,3.1rem);color:#f5f0e8;">
+          We're not a design studio<br>
+          that also does execution.<br>
+          We're an <span style="color:var(--color-primary)">execution firm</span><br>
+          that also does design.
+        </h3>
+        <p class="text-[0.95rem] leading-[1.8] max-w-[520px]"
+           style="color:rgba(245,240,232,0.42)">
+          That's not a semantic difference. It changes how we staff projects,
+          write contracts, handle delays, and where accountability ends —
+          which is never before you're satisfied.
+        </p>
+      </div>
+
+      <!-- Right: stat cards -->
+      <div class="flex flex-col gap-5">
+
+        <div class="flex gap-4 items-start rounded-xl px-6 py-6"
+             style="background:#221d17;border:1px solid rgba(255,255,255,0.05);">
+          <span class="w-11 h-11 rounded-lg flex items-center justify-center shrink-0 text-lg"
+                style="background:rgba(212,105,58,0.15)">📐</span>
+          <div>
+            <p class="text-[1rem] font-bold mb-1" style="color:#f5f0e8;">8-Phase Execution System</p>
+            <p class="text-[0.88rem] leading-[1.5]" style="color:rgba(245,240,232,0.42)">
+              Every project runs the same structured way — no improvisation, no surprises
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start rounded-xl px-6 py-6"
+             style="background:#221d17;border:1px solid rgba(255,255,255,0.05);">
+          <span class="w-11 h-11 rounded-lg flex items-center justify-center shrink-0 text-lg"
+                style="background:rgba(212,105,58,0.15)">📋</span>
+          <div>
+            <p class="text-[1rem] font-bold mb-1" style="color:#f5f0e8;">Line-Item BOQ</p>
+            <p class="text-[0.88rem] leading-[1.5]" style="color:rgba(245,240,232,0.42)">
+              Every material, grade, and rate visible before you sign anything
+            </p>
+          </div>
+        </div>
+
+        <div class="flex gap-4 items-start rounded-xl px-6 py-6"
+             style="background:#221d17;border:1px solid rgba(255,255,255,0.05);">
+          <span class="w-11 h-11 rounded-lg flex items-center justify-center shrink-0 text-lg"
+                style="background:rgba(212,105,58,0.15)">👤</span>
+          <div>
+            <p class="text-[1rem] font-bold mb-1" style="color:#f5f0e8;">Single Point of Contact</p>
+            <p class="text-[0.88rem] leading-[1.5]" style="color:rgba(245,240,232,0.42)">
+              Design to handover — no handoffs, no blame games between teams
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="rounded-[18px] px-8 md:px-[58px] py-10 md:py-[58px]
+                flex flex-col md:flex-row md:items-center justify-between gap-10"
+         style="background:#14110f;">
+      <div>
+        <h3 class="font-extrabold leading-[1.25] mb-4"
+            style="font-size:clamp(1.5rem,2vw,2.2rem);color:#f5f0e8;">
+          Still have a question
+          <span style="color:var(--color-primary)">that isn't here?</span>
+        </h3>
+        <p class="text-[0.95rem] leading-[1.8] max-w-[560px]"
+           style="color:rgba(245,240,232,0.42)">
+          Bring it. We'd rather answer everything upfront than have you find out
+          the hard way six months into a project. No pitch, no urgency, no
+          "offer expires tomorrow."
+        </p>
+      </div>
+      <a href="#contact"
+         class="inline-flex items-center justify-center gap-3 text-white text-[0.95rem] font-bold
+                h-[64px] px-10 rounded-lg whitespace-nowrap transition"
+         style="background:var(--color-primary);"
+         onmouseover="this.style.background='hsl(25 70% 35%)'"
+         onmouseout="this.style.background='var(--color-primary)'">
+        Book a Free Consultation →
+      </a>
+    </div>
+
+  </div>
+</section>
+
 <style>
-  .rt-section {
-    background: #f5f0e8;
-    padding: 88px 0 96px;
+  .rt-item.rt-open {
+    border-color: rgba(212,105,58,0.4) !important;
+    box-shadow: 0 6px 32px rgba(26,23,20,0.1);
   }
-  .rt-container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 28px;
+  .rt-item:hover {
+    border-color: rgba(212,105,58,0.3);
+    box-shadow: 0 2px 16px rgba(26,23,20,0.07);
   }
-  .rt-eyebrow {
-    font-size: 11px;
-    font-weight: 600;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: #d4693a;
-    margin-bottom: 16px;
+  .rt-item.rt-open .rt-chevron {
+    transform: rotate(180deg);
   }
-  .rt-heading {
-    font-size: clamp(1.9rem, 4vw, 3rem);
-    font-weight: 800;
-    line-height: 1.12;
-    letter-spacing: -0.02em;
-    color: #1a1714;
-    margin-bottom: 16px;
-  }
-  .rt-heading .rt-hl { color: #d4693a; }
-  .rt-sub {
-    font-size: 0.98rem;
-    font-weight: 400;
-    color: #6e6458;
-    line-height: 1.7;
-    max-width: 620px;
-    margin-bottom: 56px;
-  }
-  .rt-sub strong { color: #2e2a25; font-weight: 600; }
-
-  /* ACCORDION */
-  .rt-accordion {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 56px;
-  }
-  .rt-item {
-    background: #ffffff;
-    border: 1px solid #e8e0d4;
-    border-radius: 10px;
-    overflow: hidden;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  .rt-item:hover { border-color: rgba(212,105,58,0.3); box-shadow: 0 2px 16px rgba(26,23,20,0.07); }
-  .rt-item.rt-open { border-color: rgba(212,105,58,0.4); box-shadow: 0 6px 32px rgba(26,23,20,0.1); }
-  .rt-trigger {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    padding: 20px 22px;
-    cursor: pointer;
-    background: none;
-    border: none;
-    text-align: left;
-    font-family: inherit;
-  }
-  .rt-num {
-    font-size: 11px;
-    font-weight: 700;
-    color: #d4693a;
-    letter-spacing: 0.08em;
-    min-width: 24px;
-    flex-shrink: 0;
-  }
-  .rt-tcenter { flex: 1; }
-  .rt-tag {
-    display: inline-block;
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: #d4693a;
-    background: #fdf0e8;
-    border: 1px solid rgba(212,105,58,0.2);
-    border-radius: 4px;
-    padding: 2px 8px;
-    margin-bottom: 6px;
-  }
-  .rt-q {
-    font-size: 0.97rem;
-    font-weight: 700;
-    color: #1a1714;
-    line-height: 1.45;
-  }
-  .rt-chevron {
-    flex-shrink: 0;
-    width: 18px; height: 18px;
-    stroke: #d4693a;
-    fill: none;
-    stroke-width: 2.2;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: transform 0.3s ease;
-  }
-  .rt-item.rt-open .rt-chevron { transform: rotate(180deg); }
-  .rt-body {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.38s ease;
-  }
-  .rt-item.rt-open .rt-body { max-height: 520px; }
-  .rt-body-inner {
-    padding: 18px 22px 22px 60px;
-    border-top: 1px solid #e8e0d4;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-  }
-  .rt-ans {
-    font-size: 0.93rem;
-    font-weight: 400;
-    color: #3d3830;
-    line-height: 1.75;
-  }
-  .rt-ans strong { font-weight: 600; color: #1a1714; }
-  .rt-hbox {
-    display: flex;
-    gap: 12px;
-    align-items: flex-start;
-    background: #fff7f2;
-    border-left: 3px solid #d4693a;
-    border-radius: 0 6px 6px 0;
-    padding: 13px 16px;
-  }
-  .rt-hbox-icon { font-size: 1rem; flex-shrink: 0; line-height: 1.4; }
-  .rt-hbox-text { font-size: 0.87rem; color: #2e2a25; line-height: 1.6; }
-  .rt-hbox-text strong { font-weight: 600; color: #b8522a; }
-
-  /* CHECKLIST BAND */
-  .rt-cb {
-    background: #ffffff;
-    border: 1px solid #e8e0d4;
-    border-radius: 12px;
-    padding: 36px 40px;
-    margin-bottom: 56px;
-  }
-  .rt-cb-title { font-size: 1rem; font-weight: 700; color: #1a1714; margin-bottom: 20px; }
-  .rt-cb-title .rt-hl { color: #d4693a; }
-  .rt-cb-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 12px;
-  }
-  .rt-cb-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 0.88rem;
-    color: #2e2a25;
-    line-height: 1.5;
-  }
-  .rt-cb-check {
-    width: 18px; height: 18px;
-    background: #d4693a;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    margin-top: 1px;
-  }
-  .rt-cb-check svg { width: 10px; height: 10px; stroke: #fff; fill: none; stroke-width: 2.5; stroke-linecap: round; stroke-linejoin: round; }
-
-  /* DARK STRIP */
-  .rt-dark {
-    background: #1a1714;
-    border-radius: 12px;
-    padding: 56px 52px;
-    margin-bottom: 56px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 52px;
-    align-items: center;
-  }
-  .rt-dark-eyebrow { font-size: 10.5px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: #d4693a; margin-bottom: 14px; }
-  .rt-dark-heading { font-size: clamp(1.25rem, 2.5vw, 1.75rem); font-weight: 800; line-height: 1.28; color: #f5f0e8; letter-spacing: -0.015em; margin-bottom: 12px; }
-  .rt-dark-heading .rt-hl { color: #d4693a; }
-  .rt-dark-body { font-size: 0.9rem; color: rgba(245,240,232,0.5); line-height: 1.7; }
-  .rt-stats { display: flex; flex-direction: column; gap: 16px; }
-  .rt-stat {
-    display: flex;
-    align-items: flex-start;
-    gap: 14px;
-    padding: 18px 20px;
-    background: #252118;
-    border: 1px solid rgba(245,240,232,0.06);
-    border-radius: 8px;
-  }
-  .rt-stat-icon {
-    width: 36px; height: 36px;
-    background: rgba(212,105,58,0.15);
-    border-radius: 6px;
-    display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-    font-size: 1rem;
-  }
-  .rt-stat-val { font-size: 1rem; font-weight: 700; color: #f5f0e8; margin-bottom: 3px; }
-  .rt-stat-lbl { font-size: 0.8rem; color: rgba(245,240,232,0.45); line-height: 1.4; }
-
-  /* CTA BAR */
-  .rt-cta {
-    background: #1a1714;
-    border-radius: 12px;
-    padding: 44px 48px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 32px;
-    flex-wrap: wrap;
-  }
-  .rt-cta-title { font-size: clamp(1.1rem, 2vw, 1.45rem); font-weight: 800; color: #f5f0e8; line-height: 1.3; margin-bottom: 8px; }
-  .rt-cta-title .rt-hl { color: #d4693a; }
-  .rt-cta-sub { font-size: 0.88rem; color: rgba(245,240,232,0.5); line-height: 1.6; max-width: 460px; }
-  .rt-cta-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    background: #d4693a;
-    color: #fff;
-    font-family: inherit;
-    font-size: 0.92rem;
-    font-weight: 700;
-    padding: 15px 32px;
-    border-radius: 6px;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: background 0.2s, transform 0.2s;
-    flex-shrink: 0;
-  }
-  .rt-cta-btn:hover { background: #b8522a; transform: translateY(-2px); }
-  .rt-cta-btn svg { width: 15px; height: 15px; stroke: #fff; fill: none; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
-
-  /* RESPONSIVE */
-  @media (max-width: 800px) {
-    .rt-dark { grid-template-columns: 1fr; gap: 28px; padding: 36px 28px; }
-    .rt-cta { flex-direction: column; align-items: flex-start; padding: 32px 28px; }
-    .rt-cb { padding: 28px 24px; }
-    .rt-body-inner { padding-left: 22px; }
-  }
-  @media (max-width: 520px) {
-    .rt-cb-grid { grid-template-columns: 1fr; }
+  .rt-item.rt-open .rt-body {
+    max-height: 520px !important;
   }
 </style>
-
-<section class="rt-section">
-<div class="rt-container">
-
-  <p class="rt-eyebrow">Before You Sign Anything</p>
-  <h2 class="rt-heading">
-    Questions Every Smart Homeowner<br>
-    Should Ask — <span class="rt-hl">Answered Honestly.</span>
-  </h2>
-  <p class="rt-sub">
-    New homeowners ask hard questions before hiring anyone — about hidden commissions, inflating quotes,
-    delays, and contractors who vanish after taking advance.
-    <strong>These are real concerns. Here's exactly where VIDeR stands on each one.</strong>
-  </p>
-
-  <div class="rt-accordion">
-
-    <!-- 01 -->
-    <div class="rt-item rt-open">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">01</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Pricing</span>
-          <p class="rt-q">"They'll just inflate the quote to match whatever budget I tell them." How do you handle this?</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">That concern exists because plenty of firms do exactly that. At VIDeR, <strong>quotes are built line-by-line from site measurements and material specs</strong> — not from your budget number. Tell us your budget upfront or don't — the quote won't change. What adjusts with budget is scope, and that's always a transparent conversation.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">📋</span>
-            <p class="rt-hbox-text">Every VIDeR quote is a <strong>detailed BOQ — every material, brand, grade, and unit rate listed.</strong> You can benchmark each line independently at any hardware store.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 02 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">02</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Sales Pressure</span>
-          <p class="rt-q">"Offer valid for 3 days." "Price revision coming." How do firms use urgency — and what's your policy?</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">We don't do artificial urgency. Our quote is our quote. Take it, compare it, show it to three other firms — we want you to. <strong>Clients who do their homework and still choose VIDeR are the ones projects go smoothly with.</strong> If you get a "this price disappears in 48 hours" call from anyone, that's a pressure tactic. Walk away.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">🤝</span>
-            <p class="rt-hbox-text">We recommend getting <strong>at least 4–5 quotes before deciding.</strong> We'll even help you read the competing quotes line by line if you bring them to us.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 03 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">03</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Hidden Commissions</span>
-          <p class="rt-q">"Designers get 10–20% commission from brands they recommend. Their material suggestions aren't neutral."</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">This is real and one of the industry's least-discussed problems. <strong>The brands VIDeR specifies are ones we've used repeatedly on site and stand behind.</strong> We document every brand in your BOQ — walk into any shop and price-check them independently. Our recommendations don't change based on what pays us more.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">🔍</span>
-            <p class="rt-hbox-text">Ask us <strong>which brand of ply, laminate, and hardware we're using — and why.</strong> The answer should never be vague. If it is with anyone you're evaluating, that's a red flag.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 04 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">04</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Material Quality</span>
-          <p class="rt-q">"How do I know they're using BWP ply and not a cheaper substitute? Once it's inside the cabinet, I can't check."</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">You can't verify once it's inside — that's precisely the problem. The only real protection is a process that checks materials <strong>before they go in</strong> — at the production facility, before assembly reaches your site. We invite clients to inspect materials at the workshop stage. <strong>Most branded ply today has a QR code — scan it yourself and verify authenticity.</strong> We also use only machine edge banding, not manual — quality issues show up immediately if anything's wrong.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">✅</span>
-            <p class="rt-hbox-text"><strong>Material specs locked in BOQ → physical inspection at factory → QC checkpoint before each phase closes.</strong> You approve at every step, not at the end.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 05 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">05</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Timelines</span>
-          <p class="rt-q">"Timelines always slip. Someone I know waited almost a year. The 45-day promise is a lie."</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">Honest answer: delays can happen — civil work, building management, material lead times. What's in our control is <strong>how the project is planned and how early we flag what's drifting.</strong> We build a phase-wise execution calendar before work starts. Delays don't get hidden for weeks. And our contracts include a <strong>penalty clause tied to handover</strong> — if we miss the committed date, it costs us. That's a structural incentive, not a promise.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">📅</span>
-            <p class="rt-hbox-text">Ask every firm: <strong>"Will you add a penalty clause in the agreement?"</strong> How they respond tells you exactly how seriously they take timelines.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 06 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">06</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Money Protection</span>
-          <p class="rt-q">"A contractor took a large advance, did some work, then disappeared. Lesson learned."</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">This happens far more often than people admit. The protection is simple: <strong>milestone-linked payments only.</strong> You pay when a defined stage is complete and verified — not before, not because a calendar date passed. No credible firm should need more than a reasonable mobilisation advance. If anyone asks for 50–60% upfront before a wall is touched, that's a warning sign.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">🔒</span>
-            <p class="rt-hbox-text">Our structure: <strong>small mobilisation → payments on phase completion → final payment only at handover sign-off.</strong> Money moves when work moves.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 07 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">07</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Design vs Execution</span>
-          <p class="rt-q">"Interior designers only design. Execution is outsourced. When things go wrong, nobody's accountable."</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">This split is where most projects fall apart. Designer blames the contractor, contractor says design was unclear — you're stuck in a blame game inside your own home. <strong>Turnkey means one party owns the entire outcome.</strong> At VIDeR, the same team that designs it supervises its build. If something isn't right, there's no one else to point to.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">🎯</span>
-            <p class="rt-hbox-text">Ask every firm: <strong>"Who supervises my site daily — and what happens if the output doesn't match the design?"</strong> The answer immediately tells you how accountable they actually are.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 08 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">08</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Mid-Project Changes</span>
-          <p class="rt-q">"Design kept changing during execution. Budget exploded. How do you prevent scope creep?"</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">Mid-project changes are one of the top reasons budgets explode. Our rule: <strong>design is fully finalized and signed off before execution starts.</strong> After that, any changes are formal amendments — cost and timeline impact shown upfront before anything is done. No verbal agreements, no surprises on the final invoice.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">🔏</span>
-            <p class="rt-hbox-text">Our design sign-off is a <strong>formal approval checkpoint</strong> — layout, elevations, materials, colours. Production does not start until you've signed off. This protects your budget as much as it protects our process.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 09 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">09</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Visiting Active Sites</span>
-          <p class="rt-q">"Visit ongoing WIP sites — not just completed showrooms. Real quality shows at edges, joints, alignment."</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">This is the best advice anyone can give — and we fully agree. A completed project can be polished for photos. A WIP site shows exactly how a firm operates: how clean it is, whether workers know the plan, whether a supervisor is actually present. <strong>We welcome WIP site visits.</strong> With client consent, we'll arrange it before you sign.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">🏗️</span>
-            <p class="rt-hbox-text">Ask every firm: <strong>"Can I visit an active site before I decide?"</strong> If they decline without a compelling reason, treat that as a red flag.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 10 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">10</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">After Handover</span>
-          <p class="rt-q">"Most firms disappear post-payment. What happens when something breaks 6 months later?"</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">The fact this question exists on every forum says everything about how the industry behaves post-handover. <strong>We do a formal walkthrough against a punch list</strong> — you don't sign off until every item is resolved. Post-handover snags within the warranty period are handled with a defined response window. We're a Bangalore firm building our reputation project by project.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">📞</span>
-            <p class="rt-hbox-text">Before choosing any firm, ask: <strong>"Can I speak to a client you handed over 6–12 months ago?"</strong> A firm that stands behind its work will say yes without hesitation.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 11 -->
-    <div class="rt-item">
-      <button class="rt-trigger" onclick="rtToggle(this)">
-        <span class="rt-num">11</span>
-        <div class="rt-tcenter">
-          <span class="rt-tag">Cheap vs Value</span>
-          <p class="rt-q">"Cheap doesn't mean value. Expensive doesn't mean premium. The real difference is in materials and execution."</p>
-        </div>
-        <svg class="rt-chevron" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
-      </button>
-      <div class="rt-body">
-        <div class="rt-body-inner">
-          <p class="rt-ans">Exactly right. A ₹10L quote using BWP ply, machine edge banding, and good hardware will outlive a ₹13L quote built on cheap core materials with a polished finish on top. <strong>The only valid way to compare quotes is line-by-line on specifications</strong> — same ply grade, same hardware brand, same laminate finish. We'll help you read any competing quote if you bring it to us.</p>
-          <div class="rt-hbox">
-            <span class="rt-hbox-icon">⚖️</span>
-            <p class="rt-hbox-text"><strong>Good interiors should last 10–15 years without major rework.</strong> The decisions made on plywood, hardware, and waterproofing in the first month determine whether that actually happens.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-  </div><!-- /accordion -->
-
-  <!-- CHECKLIST BAND -->
-  <div class="rt-cb">
-    <p class="rt-cb-title">Before finalizing any interior firm, <span class="rt-hl">ask these questions</span></p>
-    <div class="rt-cb-grid">
-      <div class="rt-cb-item">
-        <span class="rt-cb-check"><svg viewBox="0 0 12 12"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
-        Can I see a detailed BOQ before signing?
-      </div>
-      <div class="rt-cb-item">
-        <span class="rt-cb-check"><svg viewBox="0 0 12 12"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
-        Will you add a penalty clause for delays?
-      </div>
-      <div class="rt-cb-item">
-        <span class="rt-cb-check"><svg viewBox="0 0 12 12"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
-        Is payment milestone-linked or time-based?
-      </div>
-      <div class="rt-cb-item">
-        <span class="rt-cb-check"><svg viewBox="0 0 12 12"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
-        Who supervises the site daily — can I meet them?
-      </div>
-      <div class="rt-cb-item">
-        <span class="rt-cb-check"><svg viewBox="0 0 12 12"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
-        Can I visit an active WIP site before deciding?
-      </div>
-      <div class="rt-cb-item">
-        <span class="rt-cb-check"><svg viewBox="0 0 12 12"><polyline points="1.5 6 4.5 9 10.5 3"/></svg></span>
-        Can I speak to a client from 6–12 months ago?
-      </div>
-    </div>
-  </div>
-
-  <!-- DARK STRIP -->
-  <div class="rt-dark">
-    <div>
-      <p class="rt-dark-eyebrow">The VIDeR Difference</p>
-      <h3 class="rt-dark-heading">We're not a design studio<br>that also does execution.<br>We're an <span class="rt-hl">execution firm</span><br>that also does design.</h3>
-      <p class="rt-dark-body">That's not a semantic difference. It changes how we staff projects, write contracts, handle delays, and where accountability ends — which is never before you're satisfied.</p>
-    </div>
-    <div class="rt-stats">
-      <div class="rt-stat">
-        <span class="rt-stat-icon">📐</span>
-        <div>
-          <p class="rt-stat-val">8-Phase Execution System</p>
-          <p class="rt-stat-lbl">Every project runs the same structured way — no improvisation, no surprises</p>
-        </div>
-      </div>
-      <div class="rt-stat">
-        <span class="rt-stat-icon">📋</span>
-        <div>
-          <p class="rt-stat-val">Line-Item BOQ</p>
-          <p class="rt-stat-lbl">Every material, grade, and rate visible before you sign anything</p>
-        </div>
-      </div>
-      <div class="rt-stat">
-        <span class="rt-stat-icon">👤</span>
-        <div>
-          <p class="rt-stat-val">Single Point of Contact</p>
-          <p class="rt-stat-lbl">Design to handover — no handoffs, no blame games between teams</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- CTA BAR -->
-  <div class="rt-cta">
-    <div>
-      <h3 class="rt-cta-title">Still have a question <span class="rt-hl">that isn't here?</span></h3>
-      <p class="rt-cta-sub">Bring it. We'd rather answer everything upfront than have you find out the hard way six months into a project. No pitch, no urgency, no "offer expires tomorrow."</p>
-    </div>
-    <a href="#contact" class="rt-cta-btn">
-      Book a Free Consultation
-      <svg viewBox="0 0 24 24"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-    </a>
-  </div>
-
-</div>
-</section>
 
 <script>
   function rtToggle(btn) {

@@ -3,14 +3,14 @@
     <div class="max-w-3xl mx-auto text-center">
 
       <h2 class="md:text-4xl font-bold mb-3 text-xl text-sky-950">
-        Before You Finalize Any Interior Company
+        Before You Finalize Any <span class="text-primary">Interior Company</span>
       </h2>
       <p class="text-muted-foreground text-lg mb-10">We suggest asking:</p>
 
       <div class="space-y-4 text-left">
         {% for item in checklist %}
         <div class="flex items-center gap-4 rounded-2xl bg-background border border-border p-5 shadow-sm hover:shadow-md transition-shadow">
-          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-950">
+          <div class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-sky-950"style="color:var(--color-primary);">
             {{ item.icon|safe }}
           </div>
           <span class="text-foreground font-medium">{{ item.text }}</span>
