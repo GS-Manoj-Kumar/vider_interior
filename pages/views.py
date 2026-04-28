@@ -267,7 +267,7 @@ def home(request):
     "Will you add a penalty clause for delays?",
     "Is payment milestone linked?",
     "Who supervises site daily?",
-    "Can I visit production assembly ?",
+    "Can I visit during production and assembly ?",
     ]
 
     return render(request, 'pages/home.html', {
