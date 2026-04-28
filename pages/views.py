@@ -240,8 +240,8 @@ def home(request):
     {
         "num": "09",
         "tag": "Visiting Active Sites",
-        "question": "Completed showrooms look nice. Can I visit an active work-in-progress site?",
-        "answer": "This is one of the smartest things a client can ask. Ongoing sites reveal cleanliness, supervision quality, worker discipline, coordination systems, and real workmanship standards.",
+        "question": "Completed showrooms look nice. Can I visit an active production assembly ?",
+        "answer": "This is one of the smartest things a client can ask. Ongoing assembly of furniture reveal cleanliness, supervision quality, worker discipline, coordination systems, and real workmanship standards.",
         "tip_icon": "🏗️",
         "tip": "Ask to see an active site before signing with any company."
     },
@@ -267,7 +267,7 @@ def home(request):
     "Will you add a penalty clause for delays?",
     "Is payment milestone linked?",
     "Who supervises site daily?",
-    "Can I visit active WIP site?",
+    "Can I visit production assembly ?",
     ]
 
     return render(request, 'pages/home.html', {
