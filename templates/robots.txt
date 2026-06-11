@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Block admin from crawlers
+Disallow: /admin/
+Disallow: /leads/submit/
+
+# Sitemap
+Sitemap: https://www.viderinteriors.com/sitemap.xml

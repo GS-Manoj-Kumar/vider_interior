@@ -1,6 +1,14 @@
 \{% load static %}
 
 {% if messages %}
+  <script>
+    if (typeof gtag !== 'undefined') {
+      gtag('event', 'conversion', {'send_to': 'AW-XXXXXXXXX/XXXXXXXXXXXXXXXX'});
+    }
+    if (typeof fbq !== 'undefined') {
+      fbq('track', 'Lead');
+    }
+  </script>
   <section id="consultation-form" class="section-padding bg-foreground">
     <div class="section-container">
       <div class="max-w-md mx-auto text-center">
